@@ -1,0 +1,78 @@
+body,html {
+    padding:0; /* убираем отступы */
+    margin:0; /* убираем отступы */
+    color:#fff; /* устанавливаем цвет текст на белый */
+    font-family: Arial; /* устанавливаем стандартный шрифт */
+    font-size:16px; /* устанавливаем размер шрифта в пикселях */
+
+    height:100%; /* устанавливаем высоту 100% относительно высоты браузера */
+}
+
+#container {
+    width:1200px; /* ширина контейнера */
+    margin: 0 auto; /* центрируем контейнер по центру */
+    height:100%;  /* устанавливаем высоту 100% относительно высоты родителя */
+
+    display:flex; /* задаем как элемент должен отображаться в документе  */
+    flex-direction: column; /* теперь все элементы будут идти строчкой */
+}
+
+#content {
+    display:flex; /* задаем как элемент должен отображаться в документе  */
+    flex-direction:row; /* теперь все элементы будут идти в столбик */
+
+    flex-grow: 1;
+}
+
+#header,
+#footer {
+    height:120px;
+}
+
+#header,
+#content-left,
+#content-right,
+#footer {
+    display:flex; /* задаем как элемент должен отображаться в документе  */
+}
+
+#header {
+    justify-content: flex-start; /* теперь содержимое будет в самом начале относительно x */
+    align-items:center; /* содержимое будет по центру относительно y */
+}
+
+#content-right {
+    justify-content: flex-end; /* теперь содержимое будет в конце относительно x */
+    align-items: flex-end; /* содержимое будет в низу блока относительно y */
+}
+
+#content-left {
+    justify-content: center; /* теперь содержимое будет в середине относительно x */
+    align-items: flex-end; /* содержимое будет в низу блока относительно y */
+}
+
+#footer {
+    justify-content: flex-end; /* теперь содержимое будет в середине относительно x */
+    align-items: center; /* содержимое будет по центру относительно y */
+}
+
+#content-right {
+    background-color: purple;
+}
+
+#content-right,
+#content-left {
+    width:50%;
+}
+
+#header {
+    background-color: red;
+}
+
+#content {
+    background-color: lightblue;
+}
+
+#footer {
+    background-color: green;
+}
